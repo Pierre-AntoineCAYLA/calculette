@@ -1,7 +1,7 @@
 package projet;
 
 import java.util.Scanner;
-import java.util.Scanner;
+
 
 public class Calculatrices {
 
@@ -11,7 +11,7 @@ public class Calculatrices {
 
 		String entree;
 		char valeur[] = new char[150];
-		int[][] numerique = new int[2][150];
+		float[][] numerique = new float[2][150];
 		int[][] operateur = new int[2][150];
 		int verif=0;
 		int compteur = 0;
@@ -23,8 +23,8 @@ public class Calculatrices {
 		int nbnombre=0;
 		int compare=0;
 		int v=0;
-		int operation=0;
-		int[] nombre=new int[150];
+		float operation=0;
+		float[] nombre=new float[150];
 		
 		sc = new Scanner(System.in);
 		
@@ -57,7 +57,7 @@ j=0;
 		
 		for (j = 0; j <=i; j++) { //classer données
 			asci = (int) valeur[j];
-			if (asci >= 47 && asci <= 58) {
+			if (asci > 47 && asci <= 58) {
 				numerique[0][compteur] = valeur[j]-48;
 				numerique[1][compteur] = j+1;
 				compteur = compteur + 1;
@@ -88,7 +88,7 @@ j=0;
 				}
 			
 			for(v=puissance;v>0;v--)
-			{nombre[nbnombre]=nombre[nbnombre]+numerique[0][compteur]*(int)Math.pow(10,v-1);
+			{nombre[nbnombre]=nombre[nbnombre]+numerique[0][compteur]*(float)Math.pow(10,v-1);
 			compteur=compteur+1;
 			}
 			nbnombre=nbnombre+1;
